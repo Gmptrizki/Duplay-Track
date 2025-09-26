@@ -7,6 +7,8 @@ use App\Livewire\Auth\LoginSiswaForm;
 use App\Livewire\Dashboard\GuruDashboard;
 use App\Livewire\Dashboard\SiswaDashboard;
 use App\Livewire\Student\Attendance\CheckIn;
+use App\Livewire\Student\Attendance\GoHome;
+use App\Livewire\Student\SevenHabits\SevenHabits;
 use App\Livewire\Student\StudentClassForm;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -20,7 +22,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'welcome')->name('welcome');
 
+
+//belum di gunakan karena belum ada fitur untuk guru
 Route::get('/login-role', [RoleLoginController::class, 'index'])->name('login.role');
+
+
+
 Route::get('/login-siswa', LoginSiswaForm::class)->name('login.siswa');
 Route::get('/login-guru', LoginGuruForm::class)->name('login.guru');
 
@@ -32,7 +39,18 @@ Route::get('/login-guru', LoginGuruForm::class)->name('login.guru');
 Route::middleware(['auth', 'role:siswa'])->group(function () {
     Route::get('/dashboard-siswa', SiswaDashboard::class)->name('dashboard.siswa');
     Route::get('/jadwal/class', StudentClassForm::class)->name('student.class');
-    Route::get('/student/barcode', CheckIn::class)->name('student.barcode');
+
+
+    //route absen masuk
+    Route::get('/student/barcode-checkin', CheckIn::class)->name('student.barcode.checkin');
+
+
+    //route absen keluar
+    Route::get('/student/barcode-gohome', GoHome::class)->name('student.barcode.gohome');
+
+
+    // Kebiasaan Anak Indonesia Hebat
+    Route::get('/student/seven-habbits', SevenHabits::class)->name('student.seven.habbits');
 });
 
 
@@ -72,3 +90,5 @@ Route::post('/logout', function (Request $request) {
 Route::view('profile', 'profile')
     ->middleware(['auth'])
     ->name('profile');
+
+

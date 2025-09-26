@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f0f8ff, #e0f2fe);
+    line-height: 1.5;
+    color: #1e3c72;
+}
+
+/* Card */
+.kebiasaan-card {
+    background: white;
+    border: 2px solid #dbeafe;
+    padding: 20px 10px;
+    border-radius: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.35s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.kebiasaan-card .icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    color: white;
+    font-size: 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.kebiasaan-card span {
+    font-weight: 600;
+    color: #1e40af;
+    font-size: 14px;
+}
+
+.kebiasaan-card:hover {
+    transform: translateY(-6px) scale(1.05);
+    border-color: #3b82f6;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.kebiasaan-card:hover .icon {
+    transform: rotate(10deg) scale(1.1);
+}
+
+/* Completed state */
+.kebiasaan-card.completed {
+    background: #f0fdf4;
+    border-color: #10b981;
+    box-shadow: 0 6px 14px rgba(16, 185, 129, 0.2);
+    position: relative;
+    transform: scale(1.02);
+}
+
+.kebiasaan-card.completed::after {
+    content: "✓";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #10b981;
+    color: white;
+    font-weight: bold;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+/* Animasi progress fill */
+@keyframes progressGlow {
+    0% { box-shadow: 0 0 6px rgba(59,130,246,0.3); }
+    50% { box-shadow: 0 0 14px rgba(59,130,246,0.5); }
+    100% { box-shadow: 0 0 6px rgba(59,130,246,0.3); }
+}
+
+#progressFill {
+    animation: progressGlow 2s infinite;
+}
