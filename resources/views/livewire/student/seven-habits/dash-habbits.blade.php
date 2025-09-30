@@ -1,6 +1,5 @@
 <link rel="stylesheet" href="{{ asset('sevenhabbits/sevenhabbits.css') }}">
 <div class="p-6 bg-gradient-to-br from-blue-100 via-white to-blue-50 min-h-screen">
-    <!-- Header -->
     <div class="text-center mb-8">
         <h1 class="text-3xl font-extrabold text-blue-800 mb-3 drop-shadow">
             7 Kebiasaan Anak Indonesia Hebat

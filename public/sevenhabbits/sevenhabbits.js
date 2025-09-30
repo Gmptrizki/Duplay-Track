@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', function() {
     let completedCount = 0;
     const totalHabits = document.querySelectorAll('.kebiasaan-card').length;
 
-    // Efek klik setiap card
     const habitCards = document.querySelectorAll('.kebiasaan-card');
     
     habitCards.forEach(card => {
