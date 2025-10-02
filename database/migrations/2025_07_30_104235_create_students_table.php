@@ -15,8 +15,10 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->string('name');
-            $table->string('nis')->unique();
-            $table->string('class');
+            $table->string('nisn')->unique();
+            $table->string('class')->nullable();
+            $table->string('gender')->nullable();
+            $table->string('religion')->nullable();
             $table->string('address')->nullable();
             $table->string('phone_number')->nullable();
             $table->date('birth_date')->nullable();

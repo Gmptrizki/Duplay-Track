@@ -8,6 +8,7 @@ use App\Livewire\Dashboard\GuruDashboard;
 use App\Livewire\Dashboard\SiswaDashboard;
 use App\Livewire\Student\Attendance\CheckIn;
 use App\Livewire\Student\Attendance\GoHome;
+use App\Livewire\Student\SevenHabits\Point\UpEarly;
 use App\Livewire\Student\SevenHabits\SevenHabits;
 use App\Livewire\Student\StudentClassForm;
 use Illuminate\Http\Request;
@@ -51,6 +52,9 @@ Route::middleware(['auth', 'role:siswa'])->group(function () {
 
     // Kebiasaan Anak Indonesia Hebat
     Route::get('/student/seven-habbits', SevenHabits::class)->name('student.seven.habbits');
+    // Up Early
+    Route::get('/student/seven-habbits/dash', UpEarly::class)->name('student.seven.habbits.dash');
+
 });
 
 

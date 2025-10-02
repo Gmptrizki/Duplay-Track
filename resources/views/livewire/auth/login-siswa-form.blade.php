@@ -2,7 +2,6 @@
     <h2 class="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-6 text-center">Login Siswa</h2>
 
     <form wire:submit.prevent="login" class="space-y-5">
-        <!-- Email -->
         <div>
             <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Email</label>
             <input wire:model.defer="email" type="email" id="email"

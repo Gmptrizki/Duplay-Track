@@ -11,8 +11,8 @@
             </div>
             <div class="w-full bg-blue-100 rounded-full h-4 overflow-hidden">
                 <div id="progressFill"
-                     class="bg-gradient-to-r from-red-400 to-yellow-400 h-4 rounded-full transition-all duration-700 ease-out"
-                     style="width: 0%">
+                    class="bg-gradient-to-r from-red-400 to-yellow-400 h-4 rounded-full transition-all duration-700 ease-out"
+                    style="width: 0%">
                 </div>
             </div>
         </div>
@@ -20,12 +20,11 @@
 
     <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5">
         <div class="kebiasaan-card">
-            <div class="icon">🌅</div>
-            <span>Bangun Pagi</span>
+            <a href="{{ route('student.seven.habbits.dash') }}">
+                <span>Bangun Pagi</span>
+            </a>
         </div>
-
         <div class="kebiasaan-card">
-            <div class="icon">🙏</div>
             <span>Beribadah</span>
         </div>
 

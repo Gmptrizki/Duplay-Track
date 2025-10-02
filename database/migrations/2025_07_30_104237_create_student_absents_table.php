@@ -11,7 +11,6 @@ return new class extends Migration
         Schema::create('student_absents', function (Blueprint $table) {
             $table->id();
 
-            // Relasi ke students
             $table->foreignId('student_id')
                 ->constrained('students')
                 ->onDelete('cascade');
