@@ -1,58 +1,64 @@
 <link rel="stylesheet" href="{{ asset('sevenhabbits/sevenhabbits.css') }}">
+
 <div class="p-6 bg-gradient-to-br from-blue-100 via-white to-blue-50 min-h-screen">
     <div class="text-center mb-8">
         <h1 class="text-3xl font-extrabold text-blue-800 mb-3 drop-shadow">
             7 Kebiasaan Anak Indonesia Hebat
         </h1>
-        <div class="mt-4 bg-white p-5 rounded-2xl border border-blue-200 shadow-lg">
-            <div class="flex justify-between text-sm text-blue-700 mb-2">
-                <span>Progress Harian</span>
-                <span id="progressPercent">0%</span>
-            </div>
-            <div class="w-full bg-blue-100 rounded-full h-4 overflow-hidden">
-                <div id="progressFill"
-                    class="bg-gradient-to-r from-red-400 to-yellow-400 h-4 rounded-full transition-all duration-700 ease-out"
-                    style="width: 0%">
-                </div>
-            </div>
-        </div>
+        <p class="text-gray-600">Pilih kebiasaan yang ingin kamu check-in hari ini</p>
     </div>
 
     <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5">
+        {{-- Bangun Pagi --}}
         <div class="kebiasaan-card">
-            <a href="{{ route('student.seven.habbits.dash') }}">
-                <span>Bangun Pagi</span>
+            <a href="{{ route('student.seven-habbits.up-early') }}"
+                class="flex flex-col items-center justify-center p-6 bg-white shadow rounded-xl hover:bg-blue-100 transition">
+                <span class="font-semibold text-blue-700">Bangun Pagi</span>
             </a>
         </div>
+
+        {{-- Beribadah --}}
         <div class="kebiasaan-card">
-            <span>Beribadah</span>
+            <a href="{{ route ('student.seven-habbits.praying') }}"
+                class="flex flex-col items-center justify-center p-6 bg-white shadow rounded-xl hover:bg-blue-100 transition">
+                <span class="font-semibold text-blue-700">Beribadah</span>
+            </a>
         </div>
 
         <div class="kebiasaan-card">
-            <div class="icon">🏃</div>
-            <span>Berolahraga</span>
+            <a href="{{ route ('student.seven-habbits.sport') }}"
+                class="flex flex-col items-center justify-center p-6 bg-white shadow rounded-xl hover:bg-blue-100 transition">
+                <span class="font-semibold text-blue-700">Berolahraga</span>
+            </a>
+        </div>
+
+        {{-- Makan Sehat --}}
+        <div class="kebiasaan-card">
+            <a href="{{route ('student.seven-habbits.eat') }}"
+                class="flex flex-col items-center justify-center p-6 bg-white shadow rounded-xl hover:bg-blue-100 transition">
+                <span class="font-semibold text-blue-700">Makan Sehat</span>
+            </a>
         </div>
 
         <div class="kebiasaan-card">
-            <div class="icon">🍎</div>
-            <span>Makan Sehat</span>
+            <a href="{{ route ('student.seven-habbits.study') }}"
+                class="flex flex-col items-center justify-center p-6 bg-white shadow rounded-xl hover:bg-blue-100 transition">
+                <span class="font-semibold text-blue-700">Gemar Belajar</span>
+            </a>
         </div>
 
         <div class="kebiasaan-card">
-            <div class="icon">📚</div>
-            <span>Gemar Belajar</span>
+            <a href="{{ route ('student.seven-habbits.social')}}"
+                class="flex flex-col items-center justify-center p-6 bg-white shadow rounded-xl hover:bg-blue-100 transition">
+                <span class="font-semibold text-blue-700">Bermasyarakat</span>
+            </a>
         </div>
 
         <div class="kebiasaan-card">
-            <div class="icon">👥</div>
-            <span>Bermasyarakat</span>
-        </div>
-
-        <div class="kebiasaan-card">
-            <div class="icon">😴</div>
-            <span>Tidur Cepat</span>
+            <a href="{{ route ('student.seven-habbits.sleep-early')}}"
+                class="flex flex-col items-center justify-center p-6 bg-white shadow rounded-xl hover:bg-blue-100 transition">
+                <span class="font-semibold text-blue-700">Tidur Cepat</span>
+            </a>
         </div>
     </div>
 </div>
-
-<script src="{{ asset('sevenhabbits/sevenhabbits.js') }}"></script>

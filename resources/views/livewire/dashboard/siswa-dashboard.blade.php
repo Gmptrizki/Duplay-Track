@@ -2,7 +2,7 @@
     <h1 class="text-3xl font-bold text-indigo-700 mb-6 border-b-4 border-indigo-600 pb-2">
         Dashboard Siswa
     </h1>
-    <ul class="grid grid-cols-2 md:grid-cols-4 gap-6">
+    <ul class="grid grid-cols-2 md:grid-cols-4 gap-4">
         <li>
             <a href="#"
                 class="flex flex-col items-center justify-between bg-white p-4 rounded-2xl border-2 border-gray-300 shadow hover:shadow-lg transition hover:-translate-y-1 hover:border-indigo-500 min-h-[150px]">
@@ -35,12 +35,13 @@
             {{-- {{ route('student.barcode.gohome') }} --}}
         </li>
         <li class="col-span-2 md:col-span-4 flex justify-center">
-            <a href="{{route('student.seven.habbits')}}"
-                class="flex flex-col items-center bg-white p-4 w-full max-w-xs rounded-2xl border-2 border-gray-300 shadow hover:shadow-lg transition hover:-translate-y-1 hover:border-purple-500 min-h-[150px]">
+            <a href="{{ route('student.seven.habbits') }}"
+                class="flex flex-col items-center bg-white p-4 w-full max-w-xs rounded-2xl border-2 border-gray-300 shadow hover:shadow-lg transition hover:-translate-y-1 min-h-[150px]">
                 <img src="{{ asset('images/icon/students/7kebiasaan.webp') }}" class="w-16 h-16 mb-2"
                     alt="Kebiasaan Anak Indonesia Hebat">
-                <span class="text-purple-600 font-semibold text-center leading-tight">Kebiasaan Anak Indonesia
-                    Hebat</span>
+                <span class="text-gray-800 font-semibold text-center leading-tight">
+                    Kebiasaan Anak Indonesia Hebat
+                </span>
             </a>
         </li>
     </ul>

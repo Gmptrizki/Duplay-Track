@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
             // TeacherDutySeeder::class,
             // ClassScheduleSeeder::class,
             StudentClassSeeder::class,
+            SevenHabbitSeeder::class,
         ]);
     }
 }
